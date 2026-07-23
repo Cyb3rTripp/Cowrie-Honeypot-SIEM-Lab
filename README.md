@@ -20,3 +20,6 @@ The environment consists of:
 - A **systemd service** to automate log processing
 
 The final system continuously monitors Cowrie logs, identifies attacker commands, categorizes activity, assigns risk scores, and forwards the resulting security events to Elasticsearch for analysis.
+
+## Architecture
+![Architecture Screenshot](https://github.com/Cyb3rTripp/Cowrie-Honeypot-SIEM-Lab/blob/main/Screenshots/Architecture.png)
