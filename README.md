@@ -38,3 +38,33 @@ The final system continuously monitors Cowrie logs, identifies attacker commands
 - Kibana data visualization
 - Automated pipeline execution using ```systemd```
 - SOC-style dashboards for security monitoring
+
+## Lab Environment
+### Honeypot Server
+| Component | Configuration |
+|-----------|---------------|
+|Operating System |Ubuntu Server |
+|CPU |2 Cores |
+|Memory |4 GB RAM |
+|Storage  | 20 GB |
+|Honeypot | Cowrie |
+|Primary Protocol | SSH |
+
+### Analysis Workstation
+| Component | Configuration |
+|-----------|---------------|
+|Operating System |Ubuntu Desktop |
+|CPU |2 Cores |
+|Memory |4 GB RAM |
+|Storage  | 30 GB |
+|SIEM Stack | Elasticsearch + Kibana |
+|Analysis | Python |
+
+### Attacker Machine
+| Component | Purpose |
+|-----------|---------------|
+|Kali Linux |Simulated Attacker Activity |
+|SSH Client |Connects to Cowrie |
+|Command Execution |Generates Honeypot Telemetry |
+
+
