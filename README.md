@@ -67,4 +67,39 @@ The final system continuously monitors Cowrie logs, identifies attacker commands
 |SSH Client |Connects to Cowrie |
 |Command Execution |Generates Honeypot Telemetry |
 
+## 1. Cowrie Honeypot Deployment
 
+The first stage of the project was deploying Cowrie on an Ubuntu Server virtual machine.
+
+Cowrie provides a controlled SSH environment designed to capture and record attacker interaction. Instead of exposing a real production system, the honeypot provides a monitored environment where attacker behavior can be safely observed.
+
+The honeypot was configured with a realistic hostname to make the environment appear more authentic to an attacker.
+
+### Example Connection
+
+```ssh anything@<HONEYPOT_IP> -p 2222```
+
+Once connected, commands entered by the simulated attacker are recorded in Cowrie's JSON log files.
+
+### Example Attacker Activity
+
+```
+whoami 
+pwd 
+cat /etc/passwd 
+uname -a
+```
+
+Cowrie records information including:
+
+- Source IP address
+- Session ID
+- Timestamp
+- Commands executed
+- Authentication activity
+- Connection information
+
+**Simulated attacker activity interacting with the Cowrie SSH honeypot:**
+![Attacker atcivity in Cowrie SSH honeypot](https://github.com/Cyb3rTripp/Cowrie-Honeypot-SIEM-Lab-Draft/blob/main/Screenshots/Attacker%20Honeypot%20Activity.png)
+
+## 2. Automated Log Collection
