@@ -23,3 +23,18 @@ The final system continuously monitors Cowrie logs, identifies attacker commands
 
 ## Architecture
 ![Architecture Screenshot](https://github.com/Cyb3rTripp/Cowrie-Honeypot-SIEM-Lab/blob/main/Screenshots/Architecture.png)
+
+## Key Features
+- SSH honeypot deployment using Cowrie
+- Simulated attacker activity from Kali Linux
+- Automated Cowrie log collection
+- Passwordless SSH authentication for automation
+- Scheduled log synchronization using ```cron```
+- Custom Python log ingestion pipeline
+- Command classification based on attacker behavior
+- Session-based risk scoring
+- Severity assignment based on cumulative activity
+- Elasticsearch event indexing
+- Kibana data visualization
+- Automated pipeline execution using ```systemd```
+- SOC-style dashboards for security monitoring
